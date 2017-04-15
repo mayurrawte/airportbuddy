@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/generic.css' %}" />
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
+    <script src="{% static 'js/generic.js' %}"></script>
+    <script src="{% static 'js/webworker.js' %}"></script>
+</head>
+<body>
+<div class="container-fluid main-container">
+    <div class="col-md-2 col-left">
+        <div class="navbar nav_title">AirportBuddy</div>
+        <div class="staffprofile">
+            <div class="staffpi"><img src="{% static 'images/user.png' %}"> </div>
+            <div class="staffpn"><p>Mayur Rawte</p></div>
+        </div>
+        <div >
+            <a href="/stafflogout">Logout</a>
+        </div>
+    </div>
+    <div class="col-md-7 col-md-offset-2 dash-area">
+        <div class="col-md-3 dash-options">
+            <div><img src="{% static 'images/alert1.png' %}"> </div>
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#sos"><div>SOS</p></div></button>
+        </div>
+        <!--
+        <div class="col-md-3 dash-options">
+            <div><img src="{% static 'images/offer1.png' %}"> </div>
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#offers"><div>Offers</p></div></button>
+        </div>
+        -->
+    </div>
+    <div class="chatscreen col-md-3">
+        <h3>Help Desk</h3>
+        <div id="chat_message">
+            <div class="msga">
+                Sample1
+            </div>
+            <div class="msga">
+                Sample2
+            </div>
+
+        </div>
+        <div id="write">
+
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- Modal -->
+<div id="sos" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+
+      <div class="modal-body">
+            <div class="sos col-md-10">
+            <form action="" class="custom-form">
+                    <div class="form-group">
+                        <label>Topic</label>
+                        <input type="text" name="topic" id="topic"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea name="message" id="message" placeholder="Message"></textarea>
+                    </div>
+                    <div>
+                        <input type="submit" value="publish" id="mqtt-test"/>
+                    </div>
+                </form>
+            </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+</body>
+</html>
