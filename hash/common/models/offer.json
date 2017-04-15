@@ -1,0 +1,36 @@
+{
+  "name": "offer",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "store_name": {
+      "type": "string",
+      "required": true
+    },
+    "started_at": {
+      "type": "string",
+      "required": true
+    },
+    "end_at": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "shop": {
+      "type": "belongsTo",
+      "model": "shop",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,13 @@
+{
+  "mongods": {
+    "host":
+'zz",
+    "port": 27017,
+    "url": "",
+    "database": "hash",
+    "password": "",
+    "name": "mongods",
+    "user": "",
+    "connector": "mongodb"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "name": "flight",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "flight_no": {
+      "type": "string",
+      "required": true
+    },
+    "airlines": {
+      "type": "string",
+      "required": true
+    },
+    "expected_arrival": {
+      "type": "string",
+      "required": true
+    },
+    "expected_departure": {
+      "type": "string",
+      "required": true
+    },
+    "scheduled_arrival": {
+      "type": "string",
+      "required": true
+    },
+    "scheduled_departure": {
+      "type": "string",
+      "required": true
+    },
+    "origin": {
+      "type": "string",
+      "required": true
+    },
+    "destination": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "string",
+      "required": true
+    },
+    "status": {
+      "type": "string",
+      "required": true
+    },
+    "origin_terminal": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,33 @@
+{
+  "name": "shop",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "shop_name": {
+      "type": "string",
+      "required": true
+    },
+    "is_resturant": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "offers": {
+      "type": "hasMany",
+      "model": "offers",
+      "foreignKey": ""
+    },
+    "user": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
